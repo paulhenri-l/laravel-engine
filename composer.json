@@ -20,12 +20,12 @@
     },
     "autoload": {
         "psr-4": {
-            "Vendor\\EngineName\\": "src/"
+            "VendorStub\\EngineNameStub\\": "src/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Vendor\\EngineName\\Tests\\": "tests/"
+            "VendorStub\\EngineNameStub\\Tests\\": "tests/"
         }
     }
 }

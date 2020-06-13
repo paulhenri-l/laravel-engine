@@ -1,9 +1,9 @@
 <?php
 
-namespace Vendor\EngineName\Tests;
+namespace VendorStub\EngineNameStub\Tests;
 
 use Illuminate\Contracts\Console\Kernel;
-use Vendor\EngineName\EngineNameServiceProvider;
+use VendorStub\EngineNameStub\EngineNameStubServiceProvider;
 
 class TestCase extends \Orchestra\Testbench\TestCase
 {
@@ -25,7 +25,7 @@ class TestCase extends \Orchestra\Testbench\TestCase
     protected function getPackageProviders($app)
     {
         return [
-            EngineNameServiceProvider::class
+            EngineNameStubServiceProvider::class
         ];
     }
 

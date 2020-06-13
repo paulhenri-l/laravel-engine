@@ -1,10 +1,10 @@
 <?php
 
-namespace Vendor\EngineName;
+namespace VendorStub\EngineNameStub;
 
 use PaulhenriL\LaravelEngineCore\EngineServiceProvider;
 
-class EngineNameServiceProvider extends EngineServiceProvider
+class EngineNameStubServiceProvider extends EngineServiceProvider
 {
     public function register()
     {

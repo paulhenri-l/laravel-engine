@@ -1,8 +1,8 @@
 <?php
 
-namespace Vendor\EngineName\Tests\Unit;
+namespace VendorStub\EngineNameStub\Tests\Unit;
 
-use Vendor\EngineName\Tests\TestCase;
+use VendorStub\EngineNameStub\Tests\TestCase;
 
 class ExampleTest extends TestCase
 {

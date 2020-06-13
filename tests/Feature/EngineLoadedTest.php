@@ -1,9 +1,9 @@
 <?php
 
-namespace Vendor\EngineName\Tests\Feature;
+namespace VendorStub\EngineNameStub\Tests\Feature;
 
-use Vendor\EngineName\EngineNameServiceProvider;
-use Vendor\EngineName\Tests\TestCase;
+use VendorStub\EngineNameStub\EngineNameStubServiceProvider;
+use VendorStub\EngineNameStub\Tests\TestCase;
 
 class EngineLoadedTest extends TestCase
 {
@@ -11,7 +11,7 @@ class EngineLoadedTest extends TestCase
     {
         $providers = $this->app->getLoadedProviders();
 
-        $engineIsLoaded = $providers[EngineNameServiceProvider::class] ?? false;
+        $engineIsLoaded = $providers[EngineNameStubServiceProvider::class] ?? false;
 
         $this->assertTrue($engineIsLoaded);
     }

@@ -1,3 +1,3 @@
 {
-    "service_provider": "Vendor\\EngineName\\EngineNameServiceProvider"
+    "service_provider": "VendorStub\\EngineNameStub\\EngineNameStubServiceProvider"
 }
