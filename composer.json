@@ -27,5 +27,13 @@
         "psr-4": {
             "VendorStub\\EngineNameStub\\Tests\\": "tests/"
         }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "VendorStub\\EngineNameStub\\EngineNameStubServiceProvider"
+            ],
+            "aliases": {}
+        }
     }
 }
