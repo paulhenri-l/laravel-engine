@@ -3,6 +3,7 @@
 namespace VendorStub\EngineNameStub\Tests;
 
 use Illuminate\Contracts\Console\Kernel;
+use Illuminate\Contracts\Foundation\Application;
 use VendorStub\EngineNameStub\EngineNameStubServiceProvider;
 
 class TestCase extends \Orchestra\Testbench\TestCase
@@ -15,11 +16,10 @@ class TestCase extends \Orchestra\Testbench\TestCase
             'app.key', '00000000000000000000000000000000'
         );
 
-        $app->make('config')->set('database.default', 'sqlite');
-        $app->make('config')->set('database.connections.sqlite', [
-            'driver' => 'sqlite',
-            'database' => ':memory:',
-        ]);
+        // If you want to use mysql for testing comment this line and edit the
+        // env variables in phpunit.xml, you'll also need to uncomment the
+        // services and env lines inside the `.github/workflows/Tests.yml` file.
+        $this->useSqlite($app);
     }
 
     protected function getPackageProviders($app)
@@ -37,5 +37,17 @@ class TestCase extends \Orchestra\Testbench\TestCase
         // instance used by the EngineServiceProvider won't be the same as the
         // one used in the TestCase. (This issue only happens with orchestra)
         $app->make(Kernel::class);
+    }
+
+    /**
+     * Use sqlite for testing
+     */
+    protected function useSqlite(Application $app)
+    {
+        $app->make('config')->set('database.default', 'sqlite');
+        $app->make('config')->set('database.connections.sqlite', [
+            'driver' => 'sqlite',
+            'database' => ':memory:',
+        ]);
     }
 }
